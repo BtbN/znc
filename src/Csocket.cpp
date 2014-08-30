@@ -2572,7 +2572,7 @@ void Csock::Init( const CS_STRING & sHostname, uint16_t uPort, int iTimeout )
 	m_shostname = sHostname;
 	m_sbuffer.clear();
 	m_eCloseType = CLT_DONT;
-	m_iMethod = SSL23;
+	m_iMethod = TLS1;
 	m_sCipherType = "ALL";
 	m_iMaxBytes = 0;
 	m_iMaxMilliSeconds = 0;
