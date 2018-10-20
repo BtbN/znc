@@ -760,11 +760,6 @@ CWebSock::EPageReqResult CWebSock::OnPageRequestInternal(const CString& sURI,
             return PAGE_DONE;
         }
 
-        if ((eModType != CModInfo::GlobalModule) && !ForceLogin()) {
-            // Make sure we have a valid user
-            return PAGE_DONE;
-        }
-
         CIRCNetwork* pNetwork = nullptr;
         if (eModType == CModInfo::NetworkModule) {
             CString sNetwork = m_sPath.Token(0, false, "/");
